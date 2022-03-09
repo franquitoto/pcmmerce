@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 
-// Context
+// ContextT
 import { ItemContext } from '../../Context';
 import ProductCard from '../ProductCard/ProductCard';
 import './ProductList.css'

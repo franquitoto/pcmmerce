@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './ProductCard.css'
-
+// 
 const ProductCard = ({ data }) => {
     return (
         <Card sx={{ maxWidth: 345}} className='card'>

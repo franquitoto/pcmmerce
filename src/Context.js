@@ -1,6 +1,6 @@
 
 import React, { createContext, useState, useEffect } from 'react';
-// FIREBASE - FIRESTON 
+// FIREBASE - FIRESTONN
 import {db} from './firebase/firebaseConfig';
 import { collection, query, where, getDocs, QuerySnapshot } from 'firebase/firestore';
 
