@@ -5,7 +5,6 @@ import {db} from './firebase/firebaseConfig';
 import { collection, query, where, getDocs, QuerySnapshot } from 'firebase/firestore';
 
 
-
 export const ItemContext = createContext();
 export const ItemsProvider = ({ children }) => {
     const [items, setItems] = useState([]);
