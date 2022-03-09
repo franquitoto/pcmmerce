@@ -1,0 +1,15 @@
+.card{
+    margin: 20px;
+    
+}
+.img{
+    height: auto;
+    width: auto;
+    max-width: 350px;
+    max-height: 350px;
+}
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    
+}
