@@ -1,0 +1,19 @@
+.nav{
+    background-color: black;
+    height: auto;
+    width: 100%;
+    display: grid;
+    
+}
+.ul{
+    justify-content: left;
+}
+.link{
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+}
+.link:hover{
+    color: orange;
+}

@@ -3,7 +3,8 @@ import React, {useContext} from 'react';
 // Contextttt
 import { ItemContext } from '../../Context';
 import ProductCard from '../ProductCard/ProductCard';
-import './ProductList.css'
+import './ProductList.css';
+import { Link } from 'react-router-dom';
 
 
 const ProductList = () => {
@@ -11,10 +12,10 @@ const ProductList = () => {
   return (
     <div className='container'>
         {items.map((items)=>{
-            return<ProductCard data={items} key={items.id} ></ProductCard>
+            return<ProductCard data={items} key={items.id} ruta='productList' ></ProductCard>
         })}
     </div>
   )
 }
 
-export default ProductList
+export default ProductList;

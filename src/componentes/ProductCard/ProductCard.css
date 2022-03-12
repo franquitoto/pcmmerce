@@ -13,3 +13,16 @@
     flex-direction: column;
     
 }
+.link1{
+    text-decoration: none;
+    color: black;
+}
+.flex{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#span{
+    font-size: 20px;
+}
