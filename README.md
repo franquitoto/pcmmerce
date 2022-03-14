@@ -31,8 +31,28 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-
+###`inicio`
 https://user-images.githubusercontent.com/89168978/158199778-49e5e136-8d80-49ec-81db-f276b41482ed.PNG
+
+###`inicio`
+![image](https://user-images.githubusercontent.com/89168978/158203308-1103ce62-1558-451e-a6ac-a01fd85893d4.png)
+
+###`Productos`
+![image](https://user-images.githubusercontent.com/89168978/158203411-9fe89252-71e3-4fc7-8af0-6a75070b598a.png)
+
+###`Productos`
+![image](https://user-images.githubusercontent.com/89168978/158203544-3e3b4c99-94c2-486a-acf9-c75b148847a6.png)
+
+###`Carrito vacio`
+![image](https://user-images.githubusercontent.com/89168978/158203682-34c76173-e12b-474b-a58b-ff5557b04f12.png)
+
+###`Carrito con productos`
+
+![image](https://user-images.githubusercontent.com/89168978/158203855-20559da1-2d58-4677-be56-3f9b2c75c07f.png)
+
+
+
+
 
 
 
