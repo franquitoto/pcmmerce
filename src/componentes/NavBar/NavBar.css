@@ -1,19 +1,114 @@
-.nav{
-    background-color: black;
-    height: auto;
+*{
+    box-sizing: border-box;
+}
+.logo{
+    height: 100px;
+    width: 165px;
+    padding-top:10px ;
+    padding-bottom: 10px;
+}
+.nav-bar{
+    background-color: orangered;
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
     width: 100%;
-    display: grid;
+}
+#btnMenu{
+    display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     
 }
-.ul{
-    justify-content: left;
+.liLogo{
+    display: none;
 }
-.link{
-    padding: 10px;
-    margin: 5px;
+#logoR{
+    margin-left: auto;
+}
+.span:hover{
+    color: #333;
+}
+.menu, .subMenu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu{
+    background: #555;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.5s;
+    
+}
+
+.menuLink{
+    display: block;
+    padding: 20px;
     color: white;
+    font-size: 1.2em;
     text-decoration: none;
 }
-.link:hover{
-    color: orange;
+.menuLink:hover{
+    background: #444;
 }
+.subMenu .menuLink:hover{
+    background: #222;
+}
+.subMenu{
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.ocultarSubMenu{
+    height: 0;
+}
+.mostrarSubMenu{
+    height: auto;
+}
+
+.subMenu .menuLink{
+    background: #333;
+    padding-left: 40px;
+}
+.mostrar{
+    margin-left: 0;
+}
+
+@media(min-width:1024px){
+    #btnMenu{
+        display: none;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .menu{
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .liLogo{
+        margin-left: auto;
+        display: block;
+    }
+    .containerSubMenu{
+        position: relative;
+    }
+    .subMenu{
+        position: absolute;
+        top: 60px;
+        width: 200px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .containerSubMenu:hover .subMenu{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+

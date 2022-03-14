@@ -7,6 +7,16 @@
     width: auto;
     max-width: 350px;
     max-height: 350px;
+    
+    
+}
+.imgM{
+    opacity: 0;
+}
+.isLoading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .cardContent{
     display: flex;
@@ -25,4 +35,7 @@
 }
 #span{
     font-size: 20px;
+}
+.cat{
+    text-align: center;
 }

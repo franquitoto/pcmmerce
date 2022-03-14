@@ -14,6 +14,7 @@ export const ItemContext = createContext();
 export const ItemsProvider = ({ children }) => {
     const [items, setItems] = useState([]);
     const [count, setCount] = useState(1);
+    const [filter, setFilter] = useState('')
     
     
     useEffect(() =>{
@@ -107,19 +108,23 @@ export const ItemsProvider = ({ children }) => {
           })      
     }
     const finalizarCompra = (data) =>{
-        Swal.fire({
+          setCarrito(initialCart)   
+          Swal.fire({
             icon: 'success',
             title: 'a finalizado la compra',
-            text: `su codigo es ${data}`,
+            text: `el codigo de su compra es ${data}`,
             footer: 'finalizando...',
-            timer: 3000,
             timerProgressBar: true,
             position: 'center'
-          })     
+          });
     };
-  
+    const selecFilter = (data) =>{
+        
+        let aux = data
+        setFilter(aux)
+    }
     return (
-        <ItemContext.Provider value={[items, setItems, carrito, addCarrito, count, removCarrito, finalizarCompra]}>
+        <ItemContext.Provider value={[items, setItems, carrito, addCarrito, count, removCarrito, finalizarCompra, filter, setFilter, selecFilter]}>
             {children}
         </ItemContext.Provider>
     );

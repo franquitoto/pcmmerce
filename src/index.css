@@ -5,9 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://img.freepik.com/vector-gratis/naranja-extracto-fondo-hexagonal-peine-miel_1164-1261.jpg?t=st=1647236768~exp=1647237368~hmac=ec1dd9c6bc968328367441862fee5a11538abf6dd6dc5795d75d5582d2012196&w=740');
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

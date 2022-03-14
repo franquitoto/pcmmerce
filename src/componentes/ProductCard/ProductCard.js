@@ -5,24 +5,41 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import './ProductCard.css'
 import { ItemContext } from '../../Context';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 //
 const ProductCard = ({ data, ruta }) => {
-    const [countL, setCountL] = useState(0)
-    const [items, setItems, carrito, addCarrito, count, removCarrito] = useContext(ItemContext);
+    const [countL, setCountL] = useState(0);
+    const [items, setItems, carrito, addCarrito, count, removCarrito, finalizarCompra, filter, setFilter, selecFilter] = useContext(ItemContext);
+    const [clasImg, setClasImg] = useState("img imgM");
+    const [isLoading, setIsloading] = useState(true);
     let auxStock = data.stock
-    console.log(ruta)
+    setTimeout(() => {
+        setIsloading(false)
+        setClasImg("img");
+    }, 2000);
     return (
         <Card sx={{ maxWidth: 345 }} className='card'>
+            {ruta === 'inicio' ?
+                <Link className='link1' to="productos" onClick={() => selecFilter(data.categoria)}>
+                <CardContent>
+                <Typography gutterBottom variant="h5" component="div" className='cat'>
+                    {data.categoria.toUpperCase()}
+                </Typography>
+                </CardContent>
+                </Link>
+                :null
+            }
             <Link to={`/detail/${data.id}`} className="link1">
+                {isLoading ? <CircularProgress disableShrink className='isLoading' /> : null}
                 <CardMedia
                     component="img"
                     image={data.img}
                     alt={data.nombre}
-                    className="img"
+                    className={clasImg}
                 />
                 <CardContent className='cardContent'>
                     <Typography gutterBottom variant="h5" component="div">
@@ -89,7 +106,7 @@ const ProductCard = ({ data, ruta }) => {
                                 timer: 3000,
                                 toast: true,
                                 position: 'top'
-                              })     
+                            })
                         }
                     }}>+</Button>
                     <Button onClick={() => {
@@ -108,7 +125,7 @@ const ProductCard = ({ data, ruta }) => {
                                 timer: 3000,
                                 toast: true,
                                 position: 'top'
-                              })     
+                            })
                         }
                     }}>Agregar al carrito</Button>
                 </CardActions>

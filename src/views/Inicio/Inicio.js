@@ -1,12 +1,24 @@
-import React from 'react'
-import ProductList from '../../componentes/ProductList/ProductList'
-import Swal from 'sweetalert2';
+import React, {useContext} from 'react';
+import { ItemContext } from '../../Context';
+import Carrousel from '../../componentes/Carrousel/Carrousel';
+import ProductCard from '../../componentes/ProductCard/ProductCard';
+import './Inicio.css';
 // CommonJS
 
+let arrayFiltrado;
+
 const Inicio = () => {
+  const [items, setItems] = useContext(ItemContext);
+
+  arrayFiltrado = items.filter(e => e.inicio === true);
   return (
     <div>
-      <ProductList></ProductList>
+      <Carrousel></Carrousel>
+        <div className='container1'>
+        {arrayFiltrado.map((items)=>{
+            return<ProductCard data={items} key={items.id} ruta='inicio' ></ProductCard>
+        })}
+        </div>
     </div>
   )
 }

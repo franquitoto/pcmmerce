@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Swal from 'sweetalert2';
 
 import './Shops.css'
 const initialState = {
@@ -28,7 +29,7 @@ const Shops = () => {
     }
 
     const onSubmit = async (e) => {
-        e.preventDefault()
+        
         const docRef = await addDoc(collection(db, "purchase"), {
             values
         });
@@ -37,6 +38,8 @@ const Shops = () => {
         setPurcheseID(docRef.id)
         setValues(initialState)
         console.log(values)
+        finalizarCompra(docRef.id)
+        
 
     }
     return (
@@ -83,7 +86,6 @@ const Shops = () => {
                 </TextField >
                 <Button onClick={() =>{
                     onSubmit()
-                    finalizarCompra(purchaseID)
                     }} type="button">enviar</Button>
                 
 
