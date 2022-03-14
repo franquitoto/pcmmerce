@@ -21,7 +21,7 @@ const Footer = () => {
                             </nav>
                         </article>
                         <article className="col-lg-12 col-md-12">
-                            <a href="index.html">
+                            <a href="#">
                                 <img src="https://firebasestorage.googleapis.com/v0/b/pcmerce-a1d70.appspot.com/o/logo2.jpg?alt=media&token=b21dad34-c230-4b9f-9e1a-fd7fe91b7009" alt="Logo" className="py-4 d-block mx-auto"/>
                             </a>
                         </article>
